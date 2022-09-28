@@ -100,7 +100,8 @@ const Home: NextPage = () => {
             <Image src={filtered[0]?.image[0]} alt="Image First" />
             <Grid gridTemplateColumns="repeat(3, 1fr)" gap="3" mx="auto" mt="2">
               {SelectImage}
-            </Grid>
+            </Grid>{" "}
+            WK
           </Box>
           <Box
             borderRadius="xl"
