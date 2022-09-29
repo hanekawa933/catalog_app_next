@@ -10,7 +10,6 @@ export interface Product {
   stock: number;
   color: string[] | undefined;
 }
-
 interface Category {
   label: string;
   value: string;

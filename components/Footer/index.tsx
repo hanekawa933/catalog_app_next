@@ -92,7 +92,7 @@ const Footer: NextPage = () => {
           <Text fontWeight="semibold" fontSize="lg">
             About
           </Text>
-          <List color="facebook.900" mt="3">
+          <List color="facebook.400" mt="3">
             <ListItem>
               <Link href="#">About Us</Link>
             </ListItem>
@@ -114,7 +114,7 @@ const Footer: NextPage = () => {
           <Text fontWeight="semibold" fontSize="lg">
             Account
           </Text>
-          <List color="facebook.900" mt="3">
+          <List color="facebook.400" mt="3">
             <ListItem>
               <Link href="#">Sign In</Link>
             </ListItem>

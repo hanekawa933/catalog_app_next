@@ -11,6 +11,7 @@ import {
 import { Icon } from "@iconify/react";
 import { useState, useEffect } from "react";
 import { Product } from "../../data/product";
+import NextLink from "next/link";
 
 const Card: NextPage<{ product: Product }> = ({
   product: { id, price, image, category, name },
@@ -48,11 +49,11 @@ const Card: NextPage<{ product: Product }> = ({
         <Badge colorScheme="facebook" fontSize="xl">
           {price}$
         </Badge>
-        <Button colorScheme="facebook" variant="outline">
-          <Link href={`/product/${id}`} _hover={{ textDecor: "none" }}>
-            Details
-          </Link>
-        </Button>
+        <NextLink href={`/product/${id}`} passHref>
+          <Button colorScheme="facebook" variant="outline">
+            <Link _hover={{ textDecoration: "none" }}>Details</Link>
+          </Button>
+        </NextLink>
       </Box>
     </Box>
   );

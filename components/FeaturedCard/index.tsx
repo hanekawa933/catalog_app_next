@@ -2,9 +2,10 @@ import { NextPage } from "next";
 import { Badge, Box, Button, Circle, Heading, Image } from "@chakra-ui/react";
 import { Icon } from "@iconify/react";
 import { Featured } from "../../data/featured";
+import NextLink from "next/link";
 
 const FeaturedCard: NextPage<{ featured: Featured }> = ({
-  featured: { button, heading, image, text },
+  featured: { id, button, heading, image, text },
 }) => {
   return (
     <Box
@@ -43,9 +44,16 @@ const FeaturedCard: NextPage<{ featured: Featured }> = ({
         <Box fontSize="xl" fontWeight="bold">
           {heading}
         </Box>
-        <Button colorScheme="facebook" alignSelf="flex-start" mt="3" size="sm">
-          {button}
-        </Button>
+        <NextLink href={`news/${id}`}>
+          <Button
+            colorScheme="facebook"
+            alignSelf="flex-start"
+            mt="3"
+            size="sm"
+          >
+            {button}
+          </Button>
+        </NextLink>
       </Box>
     </Box>
   );

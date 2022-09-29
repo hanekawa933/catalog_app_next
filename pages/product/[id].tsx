@@ -2,33 +2,29 @@ import type { NextPage } from "next";
 import Navbar from "../../components/Navbar";
 import {
   Container,
-  Flex,
   Button,
   Box,
   Image,
-  Heading,
   Text,
   Grid,
-  Divider,
   Input,
-  InputGroup,
-  InputRightElement,
-  List,
-  ListItem,
-  Link,
   Badge,
 } from "@chakra-ui/react";
-import Card from "../../components/Card";
 import { data } from "../../data/product";
 import Footer from "../../components/Footer";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import Select from "react-select";
+import { useStateContext } from "../../context/ContextProvider";
+import Head from "next/head";
 
 const Home: NextPage = () => {
   const [value, setValue] = useState<number>(0);
   const router = useRouter();
   const { id } = router.query;
+
+  const { initialIsCartOpen, initialIsSidebarOpen, initialIsLogin } =
+    useStateContext();
 
   const filtered = data?.filter((val) => {
     return val.id.toString() === id;
@@ -83,8 +79,18 @@ const Home: NextPage = () => {
 
   return (
     <div>
+      <Head>
+        <title>Rastronaut | {filtered[0]?.name}</title>
+      </Head>
       <Navbar />
-      <Container position="relative" maxW="100%" py="20">
+      <Container
+        position="relative"
+        maxW="100%"
+        py="20"
+        filter={
+          initialIsSidebarOpen || initialIsCartOpen ? "blur(3px)" : "none"
+        }
+      >
         <Box
           display="flex"
           gap="10"

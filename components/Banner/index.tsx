@@ -7,7 +7,7 @@ const Banner: NextPage<{ image: string; text: string; heading: string }> = ({
   heading,
 }) => {
   return (
-    <Box width="100%" borderRadius="xl" position="relative" height="xs">
+    <Box width="100%" borderRadius="xl" position="relative" height={"xs"}>
       <Image
         src={image}
         alt="Banner"
@@ -27,9 +27,9 @@ const Banner: NextPage<{ image: string; text: string; heading: string }> = ({
       >
         <Heading
           fontWeight="bold"
-          fontSize="7xl"
+          fontSize={["2xl", "4xl", "7xl"]}
           textTransform="uppercase"
-          letterSpacing="10px"
+          letterSpacing={["0px", "2px", "5px"]}
         >
           {heading}
         </Heading>
