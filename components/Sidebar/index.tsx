@@ -47,19 +47,19 @@ const Sidebar: NextPage = () => {
           as="nav"
           display="flex"
           flexDir="column"
-          gap="10"
+          gap="5"
           py="24"
-          px="5"
+          px={["0", "4"]}
           fontFamily="mono"
         >
-          <ListItem borderRadius="xl" boxShadow="xl">
+          <ListItem borderRadius="lg" boxShadow="lg">
             <NextLink href="/" passHref>
               <Link
                 href="/"
                 display="flex"
                 alignItems="center"
                 gap="3"
-                p="5"
+                p="4"
                 _hover={{ textDecoration: "none" }}
                 onClick={() => toggleSidebar()}
               >
@@ -70,13 +70,13 @@ const Sidebar: NextPage = () => {
               </Link>
             </NextLink>
           </ListItem>
-          <ListItem borderRadius="xl" boxShadow="xl">
+          <ListItem borderRadius="lg" boxShadow="lg">
             <NextLink href="/shop" passHref>
               <Link
                 display="flex"
                 alignItems="center"
                 gap="3"
-                p="5"
+                p="4"
                 _hover={{ textDecoration: "none" }}
                 onClick={() => toggleSidebar()}
               >
@@ -87,13 +87,13 @@ const Sidebar: NextPage = () => {
               </Link>
             </NextLink>
           </ListItem>
-          <ListItem borderRadius="xl" boxShadow="xl">
+          <ListItem borderRadius="lg" boxShadow="lg">
             <NextLink href="/contact" passHref>
               <Link
                 display="flex"
                 alignItems="center"
                 gap="3"
-                p="5"
+                p="4"
                 _hover={{ textDecoration: "none" }}
                 onClick={() => toggleSidebar()}
               >

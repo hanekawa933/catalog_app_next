@@ -133,6 +133,7 @@ const Home: NextPage = () => {
               background="facebook.400"
               width={["20%", "20%", "10%", "7%"]}
               mt="4"
+              mb="10"
             />
           </Box>
           <Grid
@@ -166,6 +167,7 @@ const Home: NextPage = () => {
               background="facebook.400"
               width={["20%", "20%", "10%", "7%"]}
               mt="4"
+              mb="10"
             />
           </Box>
           <Grid
